@@ -226,9 +226,9 @@ class FileManager():
       file.write(str(data.serialize()) + '\n')
 
   def delete_elements(self, element_to_delete, filename, replacement):
-    file_info = ''
     status = input('Напишите, что вы хотите сделать: 1 - Удаление, 2 - Изменение')
     with open(filename, 'r', encoding='utf-8') as file:
+    file_info = ''
       for line in file:
         file_info += line
         pattern = r'^\{.name.\: .<cinema_name>.*\}$'
@@ -236,7 +236,14 @@ class FileManager():
           file_info = re.sub(pattern, '', file_info)
           #добавление в файл
         else:
-          input("Какое изменение хотите внести: 1 - ")
+          #вывод файла админу для того, что бы админ выбрал, какой параметр будет изменять.
+          keyword = input('Напишите Название Кинотеатра')
+          pattern_for_change = r'\b{}\b'.format(re.escape(keyword))
+          matches = re.sub(pattern_for_change, replacement, file_info)
+          #добавление в файл, новые значения
+          #для наглядноyjuj ничего не работает классно
+          for nichego in file:
+            return
           
           
           
