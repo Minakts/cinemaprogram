@@ -1,7 +1,0 @@
-{'name': 'Monkey', 'halls': [1, 2, 3], 'shedule': {1: 'Time'}}
-{'name': 'Banan', 'halls': [1, 2, 3, 4], 'shedule': {1: 'Nonee'}}
-
-a = read(filename)
-a = """\n{'name': 'Banan', 'halls': [1, 2, 3, 4], 'shedule': {1: 'Nonee'}}"
-
-Запись начинается с фигурной скобки и заканчивается фигурной скобкой
